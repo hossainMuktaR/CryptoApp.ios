@@ -14,6 +14,6 @@ struct CoinDetail {
     let symbol: String
     let rank: Int
     let isActive: Bool
-    let tags: [String]
-    let team: [TeamMember]
+    let tags: [String]?
+    let team: [TeamMember]?
 }

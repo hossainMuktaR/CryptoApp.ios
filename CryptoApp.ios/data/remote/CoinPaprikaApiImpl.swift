@@ -9,26 +9,32 @@ import Foundation
 
 class CoinPaprikaApiImpl: CoinPaprikaApi {
     
-    private let client: URLSession
+    private let client: UrlSessionClient
     
-    init(client: URLSession = .shared) {
+    init(client: UrlSessionClient = UrlSessionClient()) {
         self.client = client
     }
     
-    func getCoin() async throws -> [CoinDto] {
+    func getCoins() async throws -> [CoinDto] {
         do {
             let url = URL(string: CoinPaprikaRoutes.GET_COINS)!
-            let (data, response) = try await client.data(from: url)
-            
-            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                throw URLError(.badServerResponse)
-            }
-            
-            let coins = try JSONDecoder().decode([CoinDto].self, from: data)
-            return coins
+            return try await client.get(url: url) as [CoinDto]
         } catch {
             print("Error: \(error.localizedDescription)")
-            return []
+            throw error
         }
     }
+    
+    func getCoinById(coinId: String) async throws -> CoinDetailDto {
+        do {
+            let url = URL(string: CoinPaprikaRoutes.GET_COINS + "/\(coinId)")!
+            print("\(url)")
+            return try await client.get(url: url) as CoinDetailDto
+        } catch {
+            print("Error: \(error.localizedDescription)")
+            throw error
+        }
+    }
+    
+    
 }

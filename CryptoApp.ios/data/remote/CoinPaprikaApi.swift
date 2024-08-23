@@ -8,5 +8,6 @@
 import Foundation
 
 protocol CoinPaprikaApi {
-    func getCoin() async throws -> [CoinDto]
+    func getCoins() async throws -> [CoinDto]
+    func getCoinById( coinId: String ) async throws -> CoinDetailDto
 }

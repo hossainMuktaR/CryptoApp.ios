@@ -15,6 +15,9 @@ class CoinRepositoryImpl: CoinRepository {
     }
     
     func getCoins() async throws -> [CoinDto] {
-        return try await api.getCoin()
+        return try await api.getCoins()
+    }
+    func getCoinById(coinId: String) async throws -> CoinDetailDto {
+        return try await api.getCoinById(coinId: coinId)
     }
 }

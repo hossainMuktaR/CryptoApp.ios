@@ -9,6 +9,6 @@ import Foundation
 
 struct CoinListState {
     var isLoading: Bool = true
-    var coins: [Coin] = []
-    var error: String = ""
+    var coins: [Coin]? = nil
+    var error: String? = nil
 }

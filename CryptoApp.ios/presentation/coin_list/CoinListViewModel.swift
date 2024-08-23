@@ -18,10 +18,9 @@ class CoinListViewModel{
     init() {
         self.repository = CoinRepositoryImpl(api: api)
         self.getCoinUseCase = GetCoinsUseCase(repository: self.repository)
-        getCoins()
     }
     
-    private func getCoins() {
+    func getCoins() {
         print("vm: getCoins Called")
         Task {
             let result = await getCoinUseCase.execute()

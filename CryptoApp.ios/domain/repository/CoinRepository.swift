@@ -7,15 +7,8 @@
 
 import Foundation
 
-
-//interface CoinRepository {
-//
-//    suspend fun getCoins(): List<CoinDto>
-//
-//    suspend fun getCoinById(coinId: String): CoinDetailDto
-//}
-
 protocol CoinRepository {
     
     func getCoins() async throws -> [CoinDto]
+    func getCoinById(coinId: String) async throws -> CoinDetailDto
 }

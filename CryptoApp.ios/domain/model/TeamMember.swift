@@ -8,7 +8,5 @@
 import Foundation
 
 struct TeamMember {
-    let id: String
-    let name: String
-    let position: String
+    let id, name, position: String
 }

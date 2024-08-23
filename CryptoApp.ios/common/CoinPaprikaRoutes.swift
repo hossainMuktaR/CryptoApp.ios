@@ -9,5 +9,5 @@ import Foundation
 
 struct CoinPaprikaRoutes {
     private static let BASE_URL = "https://api.coinpaprika.com/"
-    static let GET_COINS = "\(BASE_URL)v1/coins/"
+    static let GET_COINS = "\(BASE_URL)v1/coins"
 }
