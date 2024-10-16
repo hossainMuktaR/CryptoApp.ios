@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -69,7 +69,24 @@
 		BCB358F52C62A57700F5AA58 /* TeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMember.swift; sourceTree = "<group>"; };
 		BCB358F72C62A5D100F5AA58 /* CoinDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetail.swift; sourceTree = "<group>"; };
 		BCB358FA2C62AC9A00F5AA58 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		BCE9DC812CBF908D00B7F341 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BCE9DC872CBF922400B7F341 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BCE9DC862CBF921300B7F341 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"details-screen.png",
+				"main-screen.png",
+			);
+			target = BC60EBD72C600E550039AAC2 /* CryptoApp.ios */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		BCE9DC7F2CBF906300B7F341 /* docs */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (BCE9DC862CBF921300B7F341 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = docs; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BC60EBD52C600E550039AAC2 /* Frameworks */ = {
@@ -103,6 +120,9 @@
 		BC60EBCF2C600E550039AAC2 = {
 			isa = PBXGroup;
 			children = (
+				BCE9DC872CBF922400B7F341 /* README.md */,
+				BCE9DC812CBF908D00B7F341 /* LICENSE */,
+				BCE9DC7F2CBF906300B7F341 /* docs */,
 				BC60EBDA2C600E550039AAC2 /* CryptoApp.ios */,
 				BC60EBD92C600E550039AAC2 /* Products */,
 			);
